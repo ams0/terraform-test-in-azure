@@ -12,6 +12,7 @@ export INPUT_PATH=$INPUT_PATH
 cd /github/workspace/$INPUT_PATH
 
 echo "here I am:"
+echo $INPUT_PATH
 pwd
 ls
 
