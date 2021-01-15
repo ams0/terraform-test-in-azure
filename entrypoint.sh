@@ -11,16 +11,6 @@ export INPUT_PATH=$INPUT_PATH
 
 cd /github/workspace/$INPUT_PATH
 
-echo "here I am:"
-echo $INPUT_PATH
-echo "pwd"; pwd
-ls
-echo "ls modules:"
-ls modules/
-echo "ls modules/servicemesh:"
-ls modules/service_mesh
-echo "lstat:"
-lstat modules/service_mesh/modules/osm
 
 var_args=""
 VARIABLES=$(echo "$VARIABLES" | tr "," "\n")
