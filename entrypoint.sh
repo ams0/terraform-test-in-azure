@@ -11,6 +11,10 @@ export INPUT_PATH=$INPUT_PATH
 
 cd /github/workspace/$INPUT_PATH
 
+echo "here I am:"
+pwd
+ls
+
 var_args=""
 VARIABLES=$(echo "$VARIABLES" | tr "," "\n")
 for var in $VARIABLES; do
