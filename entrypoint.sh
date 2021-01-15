@@ -11,9 +11,6 @@ export INPUT_PATH=$INPUT_PATH
 
 cd /github/workspace/$INPUT_PATH
 
-echo "terraform init -input=false"
-terraform init -input=false
-
 var_args=""
 VARIABLES=$(echo "$VARIABLES" | tr "," "\n")
 for var in $VARIABLES; do
@@ -29,5 +26,5 @@ terraform plan -no-color
 echo "Applying Terraform templates"
 terraform apply -no-color -input=false -auto-approve $var_args
 
-echo "Applying Terraform templates"
+echo "Destroying infrastructure"
 terraform destroy -no-color -input=false -auto-approve
