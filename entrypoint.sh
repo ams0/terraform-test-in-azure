@@ -15,6 +15,8 @@ echo "here I am:"
 echo $INPUT_PATH
 pwd
 ls
+ls modules/
+ls modules/service_mesh
 
 var_args=""
 VARIABLES=$(echo "$VARIABLES" | tr "," "\n")
