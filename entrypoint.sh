@@ -18,6 +18,9 @@ for var in $VARIABLES; do
   var_args="$var_args -var $var"
 done
 
+echo "var_args:"
+echo $var_args
+
 echo "Terraform init"
 terraform init -no-color
 
