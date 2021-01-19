@@ -21,4 +21,4 @@ echo "Applying Terraform templates"
 terraform apply -no-color -input=false -auto-approve $VARIABLES
 
 echo "Destroying infrastructure"
-terraform destroy -no-color -input=false -auto-approve
+terraform destroy -no-color -input=false -auto-approve $VARIABLES
