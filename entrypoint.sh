@@ -17,8 +17,8 @@ terraform init -no-color
 echo "Terraform plan"
 terraform plan -no-color $VARIABLES
 
-echo "Applying Terraform templates"
-terraform apply -no-color -input=false -auto-approve $VARIABLES
+echo "Applying Terraform templates - returns true always so destroy can happen"
+terraform apply -no-color -input=false -auto-approve $VARIABLES || true
 
 echo "Destroying infrastructure"
 terraform destroy -no-color -input=false -auto-approve $VARIABLES
